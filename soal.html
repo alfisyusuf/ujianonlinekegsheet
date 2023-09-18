@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Soal-Soal Ujian</title>
+</head>
+<body>
+  <h1>Soal-Soal Ujian</h1>
+  <p>Selamat datang, <span id="nama-peserta"></span>!</p>
+
+  <form id="form-soal">
+    <!-- Isi form soal-soal di sini -->
+  </form>
+
+  <script>
+    // Mengambil nama peserta dari variabel global
+    const namaPeserta = window.namaPeserta || '';
+
+    // Menampilkan nama peserta dalam elemen HTML
+    const namaPesertaElement = document.getElementById('nama-peserta');
+    namaPesertaElement.textContent = namaPeserta;
+  </script>
+</body>
+</html>

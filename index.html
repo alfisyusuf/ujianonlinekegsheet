@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Halaman Login</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="login-container">
+    <h1>Login</h1>
+    <form id="login-form">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit">Masuk</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" style="display: none;">
+    <h1>Ujian Online</h1>
+    <p>Selamat datang, <span id="nama-siswa"></span>!</p>
+    <button id="mulai-ujian">Mulai Ujian</button>
+
+    <!-- Soal-soal -->
+    <div id="soal-container" style="display: none;">
+      <!-- Tambahkan soal-soal di sini -->
+      <form id="ujian-form" method="post" action="https://script.google.com/macros/s/AKfycbw3wgv6wFZ8pjwEK-_LqYDgqATbJxlocOFRUrr7KYGrn3vpBynJYLLzRvVcgFQBkNkhOg/exec">
+        <!-- Input nama yang tersembunyi -->
+        <input type="hidden" id="nama-siswa-input" name="nama-siswa" value="">
+    
+        <!-- Soal 1 -->
+        <h2>Soal 1</h2>
+        <p>Pertanyaan 1: Apakah HTML?</p>
+        <label>
+          <input type="radio" name="soal1" value="jawaban1"> Jawaban 1
+        </label>
+        <label>
+          <input type="radio" name="soal1" value="jawaban2"> Jawaban 2
+        </label>
+        <label>
+          <input type="radio" name="soal1" value="jawaban3"> Jawaban 3
+        </label>
+    
+        <!-- Soal 2 -->
+        <h2>Soal 2</h2>
+        <p>Pertanyaan 2: Apa itu CSS?</p>
+        <label>
+          <input type="radio" name="soal2" value="jawaban1"> Jawaban 1
+        </label>
+        <label>
+          <input type="radio" name="soal2" value="jawaban2"> Jawaban 2
+        </label>
+        <label>
+          <input type="radio" name="soal2" value="jawaban3"> Jawaban 3
+        </label>
+    
+        <!-- Tombol Submit -->
+        <button type="submit">Submit</button>
+      </form>
+      
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
